@@ -1,3 +1,4 @@
+#Всі ви знаєте таку функцію як <range>. Напишіть свою реалізацію цієї функції.
 def my_range(start, stop, step):
     while (start<stop):
         yield start
