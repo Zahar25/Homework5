@@ -16,4 +16,4 @@ def func (username, password, silent=False):
             elif silent:
                 return False
     raise LoginException ("Uncorrect password")
-print(func(username = 'Lera' , password = '15753', silent = False))
+print(func(username = 'Lera' , password = '15751', silent = False))
