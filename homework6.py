@@ -1,15 +1,15 @@
 #Всі ви знаєте таку функцію як <range>. Напишіть свою реалізацію цієї функції.
-def my_range(start, stop, step):
-    while (start<stop):
+def my_range(start, stop = None, step = 1):
+    if start and not stop and step > 0:
+        stop = start
+        start = 0
+    while start < stop:
         yield start
         start += step
+    while start > stop: 
+        yield start
+        step = -1
+        start += step
 
-def main():
-    generator = my_range(0,20,2)
-    try:
-        while True:
-            print(next(generator))
-    except StopIteration:
-        StopIteration
-if __name__ == '__main__':
-    main()
+for i in my_range():
+    print(i)
