@@ -13,7 +13,7 @@ def func (username, password, silent=False):
         for name, pas in user.items():
             if username == name and password == pas:
                 return True
-        if silent:
-            return False
+    if silent:
+        return False
     raise LoginException ("Uncorrect password")
-print(func(username = 'Lera' , password = '15753', silent = False))
+print(func(username = 'Lera' , password = '15751', silent = False))
